@@ -226,6 +226,12 @@ static int HookCode(DWORD code)
 	case VK_RCONTROL:
 		key = 60;
 		break;
+	case VK_ESCAPE:
+		key = 61;
+		break;
+	case VK_TAB:
+		key = 62;
+		break
 	default:
 		key = -1;
 		break;
