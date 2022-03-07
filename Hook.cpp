@@ -231,7 +231,7 @@ static int HookCode(DWORD code)
 		break;
 	case VK_TAB:
 		key = 62;
-		break
+		break;
 	default:
 		key = -1;
 		break;
