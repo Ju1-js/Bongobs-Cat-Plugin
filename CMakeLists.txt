@@ -14,14 +14,14 @@ set(RES_PATH ${SDK_ROOT_PATH}/Resources)
 project(${APP_NAME})
 
 # Detect architecture.
-# if(CMAKE_EXE_LINKER_FLAGS STREQUAL "/machine:x64 /OPT:REF")
-#   set(ARCH x86_64)
-# elseif(CMAKE_EXE_LINKER_FLAGS STREQUAL "/machine:x86 /OPT:REF")
-#   set(ARCH x86)
-# else()
-#   message(FATAL_ERROR "[${APP_NAME}] Invalid linker flag ${CMAKE_EXE_LINKER_FLAGS}.")
-# endif()
-set(ARCH x86_64)
+if(CMAKE_EXE_LINKER_FLAGS STREQUAL "/machine:x64 /OPT:REF")
+  set(ARCH x86_64)
+elseif(CMAKE_EXE_LINKER_FLAGS STREQUAL "/machine:x86 /OPT:REF")
+  set(ARCH x86)
+else()
+  message(FATAL_ERROR "[${APP_NAME}] Invalid linker flag ${CMAKE_EXE_LINKER_FLAGS}.")
+endif()
+# set(ARCH x86_64)
 
 # Detect compiler.
 if(MSVC_VERSION MATCHES 1800)
@@ -81,7 +81,6 @@ target_compile_definitions(Framework PUBLIC CSM_TARGET_WIN_GL)
 # Add include path of GLEW to framework.
 target_include_directories(Framework PUBLIC ${GLEW_PATH}/include)
 # Link libraries to framework.
-cmake_policy(SET CMP0079 NEW)
 target_link_libraries(Framework Live2DCubismCore glew_s)
 
 set_target_properties(Framework PROPERTIES FOLDER "plugins/${APP_NAME}")
@@ -147,5 +146,5 @@ target_include_directories(${APP_NAME} PRIVATE ${STB_PATH})
 
 set_target_properties(${APP_NAME} PROPERTIES FOLDER "plugins/${APP_NAME}")
 
-# install_obs_plugin_with_data(${APP_NAME} data)
+install_obs_plugin_with_data(${APP_NAME} data)
 
