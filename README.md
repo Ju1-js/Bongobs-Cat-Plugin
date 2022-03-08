@@ -4,7 +4,7 @@
  Bongo cat overlay for OBS plugin. This plugin is based on the built in Live2d CubismNativeFrameWork & Opengl. 
 # 与原插件区别
  增加模式以适应更多的游戏的键位。
-# What's different from the original plugin
+# What's different from the original version
  More modes to suit the keybinds of more games.
 # 新模式
 ## md
@@ -26,17 +26,15 @@
 ## gtaol
 * Edited from standard, fitted for Grand Theft Auto Online streaming/recording.
 * Left hand displays Esc, Tab, LShift, LCtrl, Space and QWERASDFM; right hand displays mouse movement and LMB, RMB.
-# 支持
-* 支持 OBS Studio version : 25.0.0+
-# Support
-* Support OBS Studio version** : 25.0.0+
-# 如何使用
-* 点击右侧最新版的发布
+# 支持 OBS Studio 版本 25.0.0+
+# Supports OBS Studio version 25.0.0+
+# 如何安装
+* 点击右侧最新版的发布或在[这里](https://github.com/Dovahseod/Bongobs-Cat-Plugin-Edition-D/releases)找到最新版
 * 选择资产中第一项（bongobs-dx.x.x.zip，其中dx.x.x是版本号）下载
-* 解压缩文件到OBS根目录
+* 解压缩全部内容到OBS Studio安装根目录，如安装过原插件或旧版发生文件冲突请选择覆盖
 # How to Install
-* Click on the latest release shown on the right
+* Click on the latest release shown on the right or find the latest release [here](https://github.com/Dovahseod/Bongobs-Cat-Plugin-Edition-D/releases)
 * Select the first item in Assets (bongobs-dx.x.x.zip with dx.x.x as the version) and download it
-* Unzip file to OBS root folder
+* Unzip all contents to OBS Studio installation root folder. If an older version or an original version has been installed, select replace all files when a file conflict emerges.
 # Bongo cat
-![](https://github.com/a1928370421/Bongobs-Cat-Plugin/blob/master/Resources/Bango%20Cat/ezgif-2-81825e3faab3.gif)
+![](https://github.com/Dovahseod/Bongobs-Cat-Plugin-Edition-D/blob/master/Resources/Bango%20Cat/ezgif-2-81825e3faab3.gif)
