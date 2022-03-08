@@ -1,4 +1,4 @@
-﻿  Building Custom Rule E:/obspl/obs-studio-master/plugins/live2d-plugin/thirdParty/glfw/src/CMakeLists.txt
+﻿  Building Custom Rule X:/GitDovah/obs-studio/plugins/bongobs-cat/thirdParty/glfw/src/CMakeLists.txt
   context.c
   init.c
   input.c
@@ -14,4 +14,4 @@
   wgl_context.c
   egl_context.c
   osmesa_context.c
-  glfw.vcxproj -> E:\obspl\obs-studio-master\plugins\live2d-plugin\gl\glfw\src\Release\glfw3.lib
+  glfw.vcxproj -> X:\GitDovah\obs-studio\plugins\bongobs-cat\gl\glfw\src\Release\glfw3.lib

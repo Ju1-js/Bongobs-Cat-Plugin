@@ -1,3 +1,1 @@
-﻿  Building Custom Rule E:/obs/obs-studio-master/plugins/bongobs-cat/thirdParty/glew/build/cmake/CMakeLists.txt
-  glew.c
-  glew_s.vcxproj -> E:\obs\build\lib\Debug\libglew32d.lib
+﻿  glew_s.vcxproj -> X:\GitDovah\obs-studio\build\lib\Debug\libglew32d.lib

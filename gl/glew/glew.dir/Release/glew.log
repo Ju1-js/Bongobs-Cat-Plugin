@@ -1,0 +1,5 @@
+﻿  Building Custom Rule X:/GitDovah/obs-studio/plugins/bongobs-cat/thirdParty/glew/build/cmake/CMakeLists.txt
+  glew.c
+     Creating library X:/GitDovah/obs-studio/build/lib/Release/glew32.lib and object X:/GitDovah/obs-studio/build/lib/Release/glew32.exp
+LINK : warning LNK4281: undesirable base address 0x62AA0000 for x64 image; set base address above 4GB for best ASLR optimization
+  glew.vcxproj -> X:\GitDovah\obs-studio\build\bin\Release\glew32.dll
