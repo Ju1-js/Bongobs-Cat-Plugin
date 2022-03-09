@@ -1,0 +1,97 @@
+{
+  "BackgroundImageName": "bg.png",
+  "CatBackgroundImageName": "catbg.png",
+
+  "HasModel": true,
+  "CatModelPath": "model/cat",
+
+  "KeysImagePath": "keyboard",
+  "KeysImageName": [
+    "esc.png",
+    "backtick.png","1.png","2.png","3.png","4.png","5.png","6.png",
+    "tab.png","q.png","w.png","e.png","r.png","t.png",
+    "caps.png","a.png","s.png","d.png","f.png","g.png",
+    "lshift.png","z.png","x.png","c.png","v.png",
+    "lctrl.png","win.png","lalt.png","space.png",
+
+    "7.png","8.png","9.png","0.png","mainminus.png","mainequal.png","back.png",
+    "y.png","u.png","i.png","o.png","p.png","lbracket.png","rbracket.png","backslash.png",
+    "h.png","j.png","k.png","l.png","semicolon.png","quote.png","enter.png",
+    "b.png","n.png","m.png","comma.png","period.png","slash.png","rshift.png",
+    "ralt.png","rctrl.png",
+
+    "insert.png","home.png","pgup.png",
+    "delete.png","end.png","pgdn.png",
+
+    "up.png","down.png","left.png","right.png",
+    
+    "numdiv.png","nummul.png","numminus.png","numadd.png",
+    "num7.png","num8.png","num9.png",
+    "num4.png","num5.png","num6.png",
+    "num1.png","num2.png","num3.png",
+    "num0.png","numdot.png"
+  ],
+  "KeyUse": [
+    "esc",
+    "`","1","2","3","4","5","6",
+    "tab","q","w","e","r","t",
+    "caps","a","s","d","f","g",
+    "lshift","z","x","c","v",
+    "lctrl","win","lalt","space",
+
+    "7","8","9","0","-","=","backspace",
+    "y","u","i","o","p","[","]","\\",
+    "h","j","k","l",";","'","enter",
+    "b","n","m","<",">","/","rshift",
+    "ralt","rctrl",
+
+    "insert","home","pgup",
+    "delete","end","pgdn",
+
+    "up","down","left","right",
+    
+    "num/","num*","num-","num+",
+    "num7","num8","num9",
+    "num4","num5","num6",
+    "num","num2","num3",
+    "num0","num."
+  ],
+
+  "ModelHasLeftHandModel": false,
+  "ModelLeftHandModelPath": "",
+
+  "LeftHandImagePath": "lefthand",
+  "LeftHandUpImageName": "leftup.png",
+  "LeftHandImageName": [
+    "esc.png",
+    "backtick.png","1.png","2.png","3.png","4.png","5.png","6.png",
+    "tab.png","q.png","w.png","e.png","r.png","t.png",
+    "caps.png","a.png","s.png","d.png","f.png","g.png",
+    "lshift.png","z.png","x.png","c.png","v.png",
+    "lctrl.png","win.png","lalt.png","space.png"
+  ],
+
+  "ModelHasRightHandModel": false,
+  "ModelRightHandModelPath": "",
+
+  "RightHandImagePath": "righthand",
+  "RightHandUpImageName": "rightup.png",
+  "RightHandImageName": [
+    "7.png","8.png","9.png","0.png","mainminus.png","mainequal.png","back.png",
+    "y.png","u.png","i.png","o.png","p.png","lbracket.png","rbracket.png","backslash.png",
+    "h.png","j.png","k.png","l.png","semicolon.png","quote.png","enter.png",
+    "b.png","n.png","m.png","comma.png","period.png","slash.png","rshift.png",
+    "ralt.png","rctrl.png",
+
+    "insert.png","home.png","pgup.png",
+    "delete.png","end.png","pgdn.png",
+
+    "up.png","down.png","left.png","right.png",
+    
+    "numdiv.png","nummul.png","numminus.png","numadd.png",
+    "num7.png","num8.png","num9.png",
+    "num4.png","num5.png","num6.png",
+    "num1.png","num2.png","num3.png",
+    "num0.png","numdot.png"
+  ]
+}
