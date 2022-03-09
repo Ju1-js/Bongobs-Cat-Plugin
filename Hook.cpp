@@ -342,6 +342,17 @@ static int HookCode(DWORD code)
 	case VK_DIVIDE: // Numpad /
 		key = 96;
 		break;
+
+	// Mouse
+	case VK_LBUTTON: // Left Mouse Button
+		key = 97;
+		break;
+	case VK_RBUTTON: // Right Mouse Button
+		key = 98;
+		break;
+	case VK_MBUTTON: // Middle Mouse Button
+		key = 99;
+		break;
 	
 	default:
 		key = -1; // Defaults to "placeholder" instead of numpad /

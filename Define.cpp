@@ -43,7 +43,7 @@ namespace Define {
     const csmChar *ParaLeftButton = "ParamMouseLeftDown";
     const csmChar *ParaRightButton = "ParamMouseRightDown";
 
-    const csmInt32 KeyAmount = 98;
+    const csmInt32 KeyAmount = 101;
     const csmChar *KeyDefine[] = {
 	    "a","b","c","d","e","f","g","h","i","j","k","l",
         "m","n","o","p","q","r","s","t","u","v","w","x","y","z",
@@ -56,6 +56,7 @@ namespace Define {
         "backspace","insert","delete","home","end","pgup","pgdn",
         "num0","num1","num2","num3","num4","num5","num6","num7","num8","num9",
         "num*","num+","num-","num.","num/",
+        "lmb","rmb","mmb",
         "placeholder"};
 
     const csmChar *ResourcesPath = "Bango Cat/";
