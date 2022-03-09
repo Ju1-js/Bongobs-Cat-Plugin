@@ -40,6 +40,7 @@ static int HookCode(DWORD code)
 	// Char keys for ASCI
 	// No VM Def in header
 
+	// Letter keys
 	case 0x41:
 		key = 0;//a
 		break;
@@ -118,7 +119,8 @@ static int HookCode(DWORD code)
 	case 0x5A:
 		key = 25; //z
 		break;
-	// Num Keyboard
+	
+	// Main keyboard number keys
 	case 0x30:
 		key = 26; //0 key
 		break;
@@ -160,6 +162,7 @@ static int HookCode(DWORD code)
 		key = 38;
 		break;
 
+	//F keys
 	case VK_F1:
 		key = 39;
 		break;
@@ -196,6 +199,8 @@ static int HookCode(DWORD code)
 	case VK_F12:
 		key = 50;
 		break;
+	
+	// Arrow keys
 	case VK_UP:
 		key = 51;
 		break;
@@ -208,16 +213,17 @@ static int HookCode(DWORD code)
 	case VK_LEFT:
 		key = 54;
 		break;
+	
 	case VK_OEM_COMMA:
 		key = 55;
 		break;
 	case VK_OEM_PERIOD:
 		key = 56;
 		break;
-	case VK_OEM_4:
+	case VK_OEM_4: // [{
 		key = 57;
 		break;
-	case VK_OEM_6:
+	case VK_OEM_6: // ]}
 		key = 58;
 		break;
 	case VK_RSHIFT:
@@ -232,8 +238,113 @@ static int HookCode(DWORD code)
 	case VK_TAB:
 		key = 62;
 		break;
+	case VK_CAPITAL:
+		key = 63;
+		break;
+	case VK_LWIN: // Left Windows
+		key = 64;
+		break;
+	case VK_LMENU: // Left Alt
+		key = 65;
+		break;
+	case VK_RMENU: // Right Alt
+		key = 66;
+		break;
+	case VK_RETURN:
+		key = 67;
+		break;
+	case VK_OEM_2: // /?
+		key = 68;
+		break;
+	case VK_OEM_3: // `~
+		key = 69; // nice
+		break;
+	case VK_OEM_5: // \|
+		key = 70;
+		break;
+	case VK_OEM_7: // '"
+		key = 71;
+		break;
+	case VK_OEM_1: // ;:
+		key = 72;
+		break;
+	case VK_OEM_PLUS: // =+
+		key = 73;
+		break;
+	case VK_OEM_MINUS: // -_
+		key = 74;
+		break;
+	case VK_BACK: // Backspace
+		key = 75;
+		break;
+	case VK_INSERT:
+		key = 76;
+		break;
+	case VK_DELETE:
+		key = 77;
+		break;
+	case VK_HOME:
+		key = 78;
+		break;
+	case VK_END:
+		key = 79;
+		break;
+	case VK_PRIOR: // Page Up
+		key = 80;
+		break;
+	case VK_NEXT: // Page Down
+		key = 81;
+		break;
+	
+	// Numpad
+	case VK_NUMPAD0:
+		key = 82;
+		break;
+	case VK_NUMPAD1:
+		key = 83;
+		break;
+	case VK_NUMPAD2:
+		key = 84;
+		break;
+	case VK_NUMPAD3:
+		key = 85;
+		break;
+	case VK_NUMPAD4:
+		key = 86;
+		break;
+	case VK_NUMPAD5:
+		key = 87;
+		break;
+	case VK_NUMPAD6:
+		key = 88;
+		break;
+	case VK_NUMPAD7:
+		key = 89;
+		break;
+	case VK_NUMPAD8:
+		key = 90;
+		break;
+	case VK_NUMPAD9:
+		key = 91;
+		break;
+	case VK_MULTIPLY: // Numpad *
+		key = 92;
+		break;
+	case VK_ADD: // Numpad +
+		key = 93;
+		break;
+	case VK_SUBTRACT: // Numpad -
+		key = 94;
+		break;
+	case VK_DECIMAL: // Numpad .
+		key = 95;
+		break;
+	case VK_DIVIDE: // Numpad /
+		key = 96;
+		break;
+	
 	default:
-		key = -1;
+		key = -1; // Defaults to "placeholder" instead of numpad /
 		break;
 	}
 	return key;
