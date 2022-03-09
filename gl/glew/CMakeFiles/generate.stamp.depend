@@ -1,0 +1,8 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.23/Modules/FindOpenGL.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/GNUInstallDirs.cmake
+X:/GitDovah/obs-studio/plugins/bongobs-cat/thirdParty/glew/build/cmake/CMakeLists.txt
+X:/GitDovah/obs-studio/plugins/bongobs-cat/thirdParty/glew/build/cmake/cmake_uninstall.cmake.in
+X:/GitDovah/obs-studio/plugins/bongobs-cat/thirdParty/glew/glew.pc.in

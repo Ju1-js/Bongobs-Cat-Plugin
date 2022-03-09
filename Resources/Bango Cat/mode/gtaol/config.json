@@ -1,0 +1,36 @@
+{
+  "BackgroundImageName": "bg.png",
+  "CatBackgroundImageName": "catbg.png",
+
+  "HasModel": true,
+  "CatModelPath": "model/cat",
+  
+  "KeysImagePath":"keyboard",
+  "KeysImageName":[
+      "esc.png",  "tab.png",  "m.png",
+			"shift.png",  "q.png",  "w.png",  "e.png",  "r.png",
+      "ctrl.png",  "a.png",  "s.png", "d.png", "f.png", "space.png"],
+	"KeyUse":[
+	  "esc","tab", "m", 
+	  "lshift", "q", "w", "e", "r",
+	  "lctrl", "a", "s", "d", "f", "space"],
+	
+  "ModelHasLeftHandModel": false,
+  "ModelLeftHandModelPath": "",
+  
+  "LeftHandImagePath": "lefthand",
+  "LeftHandUpImageName": "leftup.png",
+  "LeftHandImageName": [
+            "esc.png",  "tab.png",  "m.png",
+					  "shift.png",  "q.png",  "w.png",  "e.png",  "r.png",  
+					  "ctrl.png",  "a.png",  "s.png", "d.png", "f.png", "space.png"],
+				    
+  "ModelHasRightHandModel": true,
+  "ModelRightHandModelPath": "model/cat right hand",
+  
+  "RightHandImagePath": "",
+  "RightHandUpImageName": "",
+  "RightHandImageName": []
+  
+  
+}

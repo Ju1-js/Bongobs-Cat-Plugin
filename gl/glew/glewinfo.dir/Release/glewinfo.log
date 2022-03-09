@@ -1,0 +1,6 @@
+﻿  Building Custom Rule X:/GitDovah/obs-studio/plugins/bongobs-cat/thirdParty/glew/build/cmake/CMakeLists.txt
+  glewinfo.c
+X:\GitDovah\obs-studio\plugins\bongobs-cat\thirdParty\glew\src\glewinfo.c(16621,28): warning C4133: '=': incompatible types - from 'char [5]' to 'LPCWSTR'
+X:\GitDovah\obs-studio\plugins\bongobs-cat\thirdParty\glew\src\glewinfo.c(16625,1): warning C4133: 'function': incompatible types - from 'char [5]' to 'LPCWSTR'
+X:\GitDovah\obs-studio\plugins\bongobs-cat\thirdParty\glew\src\glewinfo.c(16693,25): warning C4133: 'function': incompatible types - from 'char [5]' to 'LPCWSTR'
+  glewinfo.vcxproj -> X:\GitDovah\obs-studio\build\bin\Release\glewinfo.exe

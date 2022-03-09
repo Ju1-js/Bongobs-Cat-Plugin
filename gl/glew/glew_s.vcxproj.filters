@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="X:\GitDovah\obs-studio\plugins\bongobs-cat\thirdParty\glew\src\glew.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="X:\GitDovah\obs-studio\plugins\bongobs-cat\thirdParty\glew\include\GL\wglew.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="X:\GitDovah\obs-studio\plugins\bongobs-cat\thirdParty\glew\include\GL\glew.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="X:\GitDovah\obs-studio\plugins\bongobs-cat\thirdParty\glew\include\GL\glxew.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="X:\GitDovah\obs-studio\plugins\bongobs-cat\thirdParty\glew\build\cmake\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="X:\GitDovah\obs-studio\plugins\bongobs-cat\thirdParty\glew\build\glew.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{0F202CAA-E3EB-3A53-9858-7601B3AA4D47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{145E5728-A92C-3E63-8525-6A02FAEEF56B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
