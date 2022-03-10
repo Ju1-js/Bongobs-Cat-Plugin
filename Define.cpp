@@ -51,7 +51,7 @@ namespace Define {
 	    "space","lshift","lctrl",
 	    "f1","f2","f3","f4","f5","f6","f7","f8","f9","f10","f11","f12",
 	    "up","down","left","right","<",">","[","]",
-        "rshift","rctrl","esc","tab","caps","win","lalt","ralt","enter",
+        "rshift","rctrl","esc","tab","caps","lwin","lalt","ralt","enter",
         "/","`","\\","'",";","=","-",
         "backspace","insert","delete","home","end","pgup","pgdn",
         "num0","num1","num2","num3","num4","num5","num6","num7","num8","num9",

@@ -2,8 +2,8 @@
   "BackgroundImageName": "bg.png",
   "CatBackgroundImageName": "catbg.png",
 
-  "HasModel": true,
-  "CatModelPath": "model/cat",
+  "HasModel": false,
+  "CatModelPath": "",
 
   "KeysImagePath": "keyboard",
   "KeysImageName": [
@@ -12,7 +12,7 @@
     "tab.png","q.png","w.png","e.png","r.png","t.png",
     "caps.png","a.png","s.png","d.png","f.png","g.png",
     "lshift.png","z.png","x.png","c.png","v.png",
-    "lctrl.png","win.png","lalt.png","space.png",
+    "lctrl.png","lwin.png","lalt.png","space.png",
 
     "7.png","8.png","9.png","0.png","mainminus.png","mainequal.png","back.png",
     "y.png","u.png","i.png","o.png","p.png","lbracket.png","rbracket.png","backslash.png",
@@ -37,7 +37,7 @@
     "tab","q","w","e","r","t",
     "caps","a","s","d","f","g",
     "lshift","z","x","c","v",
-    "lctrl","win","lalt","space",
+    "lctrl","lwin","lalt","space",
 
     "7","8","9","0","-","=","backspace",
     "y","u","i","o","p","[","]","\\",
@@ -53,7 +53,7 @@
     "num/","num*","num-","num+",
     "num7","num8","num9",
     "num4","num5","num6",
-    "num","num2","num3",
+    "num1","num2","num3",
     "num0","num."
   ],
 
@@ -68,7 +68,7 @@
     "tab.png","q.png","w.png","e.png","r.png","t.png",
     "caps.png","a.png","s.png","d.png","f.png","g.png",
     "lshift.png","z.png","x.png","c.png","v.png",
-    "lctrl.png","win.png","lalt.png","space.png"
+    "lctrl.png","lwin.png","lalt.png","space.png"
   ],
 
   "ModelHasRightHandModel": false,

@@ -244,10 +244,10 @@ static int HookCode(DWORD code)
 	case VK_LWIN: // Left Windows
 		key = 64;
 		break;
-	case VK_LMENU: // Left Alt
+	case 0xA4: // Left Alt
 		key = 65;
 		break;
-	case VK_RMENU: // Right Alt
+	case 0xA5: // Right Alt
 		key = 66;
 		break;
 	case VK_RETURN:
