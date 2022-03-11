@@ -16,18 +16,24 @@
 ## gtaol
 * 改编自standard，适应Grand Theft Auto Online直播、录像
 * 左手识别Esc, Tab, LShift, LCtrl, 空格及QWERASDFM，右手显示鼠标的移动与鼠标左右键
+## fullkeyboard1
+* 识别键盘上基本全部按键，笔记本键盘布局，带小键盘，不带F1-F12
+* **已知问题：左右Alt可能不会显示**
 # New Modes
 ## md
 * Edited from mania, fitted for Muse Dash streaming/recording.
-* Recognizes D, F, J and K, among which D and F are air, J and K are ground.
+* Displays D, F, J and K, among which D and F are air, J and K are ground.
 ## mdcustom
 * Edited from mania, fitted for Muse Dash streaming/recording.
-* Recognizes D, F, J, K and O, among which D, F and O are air, J and K are ground. K and O both display on the same key with O on top of K.
+* Displays D, F, J, K and O, among which D, F and O are air, J and K are ground. K and O both display on the same key with O on top of K.
 ## gtaol
 * Edited from standard, fitted for Grand Theft Auto Online streaming/recording.
 * Left hand displays Esc, Tab, LShift, LCtrl, Space and QWERASDFM; right hand displays mouse movement and LMB, RMB.
-# 支持 OBS Studio 版本 25.0.0+
-# Supports OBS Studio version 25.0.0+
+## fullkeyboard1
+* Displays almost all keys on the keyboard. Laptop keyboard layout, with numpad, without F1-F12.
+* **Known issue: LAlt and RAlt may not display correctly.**
+# 支持 OBS Studio 版本 25.0.0+, 仅x64
+# Supports OBS Studio version 25.0.0+, x64 only
 # 如何安装
 * 点击右侧最新版的发布或在[这里](https://github.com/Dovahseod/Bongobs-Cat-Plugin-Edition-D/releases)找到最新版
 * 选择资产中第一项（bongobs-dx.x.x.zip，其中dx.x.x是版本号）下载
