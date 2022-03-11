@@ -14,4 +14,5 @@
   wgl_context.c
   egl_context.c
   osmesa_context.c
+  Generating Code...
   glfw.vcxproj -> X:\GitDovah\obs-studio\plugins\bongobs-cat\gl\glfw\src\Release\glfw3.lib

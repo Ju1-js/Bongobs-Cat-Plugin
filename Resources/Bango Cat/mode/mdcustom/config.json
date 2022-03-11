@@ -10,15 +10,15 @@
     "d.png",
     "f.png",
     "j.png",
-    "1o.png",
-    "k.png"
+    "k.png",
+    "o.png"
   ],
   "KeyUse": [
     "d",
     "f",
     "j",
-    "o",
-    "k"
+    "k",
+    "o"
   ],
 
   "ModelHasLeftHandModel": false,
