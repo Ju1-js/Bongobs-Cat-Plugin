@@ -1,33 +1,35 @@
 #pragma once
 #include <Windows.h>
-#include<thread>
+
+#include <atomic>
+#include <thread>
 
 class Hook {
-public:
+ public:
+  Hook();
 
+  ~Hook();
 
+  void Strat();
 
-	Hook();
+  void Stop();
 
-	~Hook();
+ private:
+  void Run();
+  void OnWmInput(HWND window, HRAWINPUT input);
 
-	void Strat();	
+  static LRESULT CALLBACK KeyboardHookProc(int nCode, WPARAM wParam,
+                                           LPARAM lParam);
 
-	void Stop();
+  static LRESULT CALLBACK MouseHookProc(int nCode, WPARAM wParam,
+                                        LPARAM lParam);
 
-private:
-	void Run();
+  static LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam,
+                                     LPARAM lParam);
 
-	bool isExist;
+  HWND m_hWnd;
 
-	static LRESULT CALLBACK KeyboardHookProc(int nCode, WPARAM wParam, LPARAM lParam);
-
-	static LRESULT CALLBACK MouseHookProc(int nCode, WPARAM wParam,  LPARAM lParam);
-
-	static LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam,LPARAM lParam);
-
-	HWND m_hWnd;
-
-	std::thread *th;
-
+  std::thread *th;
+  std::atomic_bool enabled_ = false;
+  std::atomic_bool running_ = false;
 };

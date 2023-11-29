@@ -1,2 +1,4 @@
 *.ai
 *.psd
+/gl/
+/thirdParty/glew/glew.pc
