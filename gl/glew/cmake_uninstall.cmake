@@ -1,19 +1,19 @@
-if(NOT EXISTS "X:/GitDovah/obs-studio/plugins/bongobs-cat/gl/glew/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: X:/GitDovah/obs-studio/plugins/bongobs-cat/gl/glew/install_manifest.txt")
-endif(NOT EXISTS "X:/GitDovah/obs-studio/plugins/bongobs-cat/gl/glew/install_manifest.txt")
+if(NOT EXISTS "C:/Users/jlaur/Documents/GitHub/obs-studio/plugins/Bongobs-Cat-Plugin/gl/glew/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: C:/Users/jlaur/Documents/GitHub/obs-studio/plugins/Bongobs-Cat-Plugin/gl/glew/install_manifest.txt")
+endif(NOT EXISTS "C:/Users/jlaur/Documents/GitHub/obs-studio/plugins/Bongobs-Cat-Plugin/gl/glew/install_manifest.txt")
 
 if (NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set (CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/obs-studio")
+  set (CMAKE_INSTALL_PREFIX "C:/Users/jlaur/Documents/GitHub/obs-studio/plugins/Bongobs-Cat-Plugin/out/install/x64-Debug")
 endif ()
  message(${CMAKE_INSTALL_PREFIX})
 
-file(READ "X:/GitDovah/obs-studio/plugins/bongobs-cat/gl/glew/install_manifest.txt" files)
+file(READ "C:/Users/jlaur/Documents/GitHub/obs-studio/plugins/Bongobs-Cat-Plugin/gl/glew/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 foreach(file ${files})
   message(STATUS "Uninstalling $ENV{DESTDIR}${file}")
   if(IS_SYMLINK "$ENV{DESTDIR}${file}" OR EXISTS "$ENV{DESTDIR}${file}")
     exec_program(
-      "C:/Program Files/CMake/bin/cmake.exe" ARGS "-E remove \"$ENV{DESTDIR}${file}\""
+      "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe" ARGS "-E remove \"$ENV{DESTDIR}${file}\""
       OUTPUT_VARIABLE rm_out
       RETURN_VALUE rm_retval
       )

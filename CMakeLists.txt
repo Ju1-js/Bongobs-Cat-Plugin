@@ -1,3 +1,5 @@
+cmake_minimum_required(VERSION 3.27)
+
 # Set app name.
 set(APP_NAME bongobs-cat)
 
@@ -38,7 +40,7 @@ elseif(MSVC_VERSION GREATER_EQUAL 1920 AND MSVC_VERSION LESS 1930)
   set(COMPILER 142)
 elseif(MSVC_VERSION GREATER_EQUAL 1930 AND MSVC_VERSION LESS 1940)
   # Visual Studio 2022
-  set(COMPILER 142) # Hopefully works; correct toolset should be 143.
+  set(COMPILER 143) # Hopefully works; correct toolset should be 143.
 elseif(MSVC)
   message(FATAL_ERROR "[${APP_NAME}] Unsupported Visual C++ compiler used.")
 else()
@@ -93,13 +95,13 @@ find_package(OpenGL REQUIRED)
 set(${APP_NAME}_SOURCES
 	vtuber_plugin.cpp
  	VtuberPlugin.cpp
-	VtuberFrameWork.cpp  
+	VtuberFrameWork.cpp
 	VtuberDelegate.cpp
-	View.cpp	
+	View.cpp
 	Live2DManager.cpp
-	Model.cpp	
-	Pal.cpp	
-	LAppTextureManager.cpp			    
+	Model.cpp
+	Pal.cpp
+	LAppTextureManager.cpp
 	LAppAllocator.cpp
         Sprite.cpp
         Hook.cpp
@@ -109,7 +111,7 @@ set(${APP_NAME}_SOURCES
 	InfoReader.cpp
 	)
 
-set(${APP_NAME}_HEADERS	
+set(${APP_NAME}_HEADERS
 	LAppAllocator.hpp
 	Define.hpp
 	VtuberDelegate.hpp
@@ -132,7 +134,7 @@ set(${APP_NAME}_HEADERS
 
 add_library(${APP_NAME} MODULE
 	${${APP_NAME}_SOURCES}
-	${${APP_NAME}_HEADERS}    	
+	${${APP_NAME}_HEADERS}
 )
 
 # Link libraries to app.

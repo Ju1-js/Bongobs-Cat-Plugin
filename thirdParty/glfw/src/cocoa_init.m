@@ -1,5 +1,5 @@
 //========================================================================
-// GLFW 3.4 macOS - www.glfw.org
+// GLFW 3.3 macOS - www.glfw.org
 //------------------------------------------------------------------------
 // Copyright (c) 2009-2019 Camilla Löwy <elmindreda@glfw.org>
 //
@@ -447,6 +447,7 @@ static GLFWbool initializeTIS(void)
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
+    _glfw.ns.finishedLaunching = GLFW_TRUE;
     _glfwPlatformPostEmptyEvent();
     [NSApp stop:nil];
 }
@@ -502,6 +503,9 @@ int _glfwPlatformInit(void)
                              toTarget:_glfw.ns.helper
                            withObject:nil];
 
+    if (NSApp)
+        _glfw.ns.finishedLaunching = GLFW_TRUE;
+
     [NSApplication sharedApplication];
 
     _glfw.ns.delegate = [[GLFWApplicationDelegate alloc] init];
@@ -554,10 +558,6 @@ int _glfwPlatformInit(void)
     _glfwInitJoysticksNS();
 
     _glfwPollMonitorsNS();
-
-    if (![[NSRunningApplication currentApplication] isFinishedLaunching])
-        [NSApp run];
-
     return GLFW_TRUE;
 
     } // autoreleasepool

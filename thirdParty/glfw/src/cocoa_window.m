@@ -1,5 +1,5 @@
 //========================================================================
-// GLFW 3.4 macOS - www.glfw.org
+// GLFW 3.3 macOS - www.glfw.org
 //------------------------------------------------------------------------
 // Copyright (c) 2009-2019 Camilla Löwy <elmindreda@glfw.org>
 //
@@ -320,14 +320,6 @@ static const NSRange kEmptyRange = { NSNotFound, 0 };
         _glfwPlatformIconifyWindow(window);
 
     _glfwInputWindowFocus(window, GLFW_FALSE);
-}
-
-- (void)windowDidChangeOcclusionState:(NSNotification* )notification
-{
-    if ([window->ns.object occlusionState] & NSWindowOcclusionStateVisible)
-        window->ns.occluded = GLFW_FALSE;
-    else
-        window->ns.occluded = GLFW_TRUE;
 }
 
 @end
@@ -892,6 +884,9 @@ int _glfwPlatformCreateWindow(_GLFWwindow* window,
 {
     @autoreleasepool {
 
+    if (!_glfw.ns.finishedLaunching)
+        [NSApp run];
+
     if (!createNativeWindow(window, wndconfig, fbconfig))
         return GLFW_FALSE;
 
@@ -906,11 +901,6 @@ int _glfwPlatformCreateWindow(_GLFWwindow* window,
         }
         else if (ctxconfig->source == GLFW_EGL_CONTEXT_API)
         {
-            // EGL implementation on macOS use CALayer* EGLNativeWindowType so we
-            // need to get the layer for EGL window surface creation.
-            [window->ns.view setWantsLayer:YES];
-            window->ns.layer = [window->ns.view layer];
-
             if (!_glfwInitEGL())
                 return GLFW_FALSE;
             if (!_glfwCreateContextEGL(window, ctxconfig, fbconfig))
@@ -1387,6 +1377,9 @@ void _glfwPlatformPollEvents(void)
 {
     @autoreleasepool {
 
+    if (!_glfw.ns.finishedLaunching)
+        [NSApp run];
+
     for (;;)
     {
         NSEvent* event = [NSApp nextEventMatchingMask:NSEventMaskAny
@@ -1406,6 +1399,9 @@ void _glfwPlatformWaitEvents(void)
 {
     @autoreleasepool {
 
+    if (!_glfw.ns.finishedLaunching)
+        [NSApp run];
+
     // I wanted to pass NO to dequeue:, and rely on PollEvents to
     // dequeue and send.  For reasons not at all clear to me, passing
     // NO to dequeue: causes this method never to return.
@@ -1424,6 +1420,9 @@ void _glfwPlatformWaitEventsTimeout(double timeout)
 {
     @autoreleasepool {
 
+    if (!_glfw.ns.finishedLaunching)
+        [NSApp run];
+
     NSDate* date = [NSDate dateWithTimeIntervalSinceNow:timeout];
     NSEvent* event = [NSApp nextEventMatchingMask:NSEventMaskAny
                                         untilDate:date
@@ -1440,6 +1439,9 @@ void _glfwPlatformWaitEventsTimeout(double timeout)
 void _glfwPlatformPostEmptyEvent(void)
 {
     @autoreleasepool {
+
+    if (!_glfw.ns.finishedLaunching)
+        [NSApp run];
 
     NSEvent* event = [NSEvent otherEventWithType:NSEventTypeApplicationDefined
                                         location:NSMakePoint(0, 0)
@@ -1612,49 +1614,23 @@ int _glfwPlatformCreateStandardCursor(_GLFWcursor* cursor, int shape)
 {
     @autoreleasepool {
 
-    SEL cursorSelector = NULL;
-
-    // HACK: Try to use a private message
-    if (shape == GLFW_RESIZE_EW_CURSOR)
-        cursorSelector = NSSelectorFromString(@"_windowResizeEastWestCursor");
-    else if (shape == GLFW_RESIZE_NS_CURSOR)
-        cursorSelector = NSSelectorFromString(@"_windowResizeNorthSouthCursor");
-    else if (shape == GLFW_RESIZE_NWSE_CURSOR)
-        cursorSelector = NSSelectorFromString(@"_windowResizeNorthWestSouthEastCursor");
-    else if (shape == GLFW_RESIZE_NESW_CURSOR)
-        cursorSelector = NSSelectorFromString(@"_windowResizeNorthEastSouthWestCursor");
-
-    if (cursorSelector && [NSCursor respondsToSelector:cursorSelector])
-    {
-        id object = [NSCursor performSelector:cursorSelector];
-        if ([object isKindOfClass:[NSCursor class]])
-            cursor->ns.object = object;
-    }
+    if (shape == GLFW_ARROW_CURSOR)
+        cursor->ns.object = [NSCursor arrowCursor];
+    else if (shape == GLFW_IBEAM_CURSOR)
+        cursor->ns.object = [NSCursor IBeamCursor];
+    else if (shape == GLFW_CROSSHAIR_CURSOR)
+        cursor->ns.object = [NSCursor crosshairCursor];
+    else if (shape == GLFW_HAND_CURSOR)
+        cursor->ns.object = [NSCursor pointingHandCursor];
+    else if (shape == GLFW_HRESIZE_CURSOR)
+        cursor->ns.object = [NSCursor resizeLeftRightCursor];
+    else if (shape == GLFW_VRESIZE_CURSOR)
+        cursor->ns.object = [NSCursor resizeUpDownCursor];
 
     if (!cursor->ns.object)
     {
-        if (shape == GLFW_ARROW_CURSOR)
-            cursor->ns.object = [NSCursor arrowCursor];
-        else if (shape == GLFW_IBEAM_CURSOR)
-            cursor->ns.object = [NSCursor IBeamCursor];
-        else if (shape == GLFW_CROSSHAIR_CURSOR)
-            cursor->ns.object = [NSCursor crosshairCursor];
-        else if (shape == GLFW_POINTING_HAND_CURSOR)
-            cursor->ns.object = [NSCursor pointingHandCursor];
-        else if (shape == GLFW_RESIZE_EW_CURSOR)
-            cursor->ns.object = [NSCursor resizeLeftRightCursor];
-        else if (shape == GLFW_RESIZE_NS_CURSOR)
-            cursor->ns.object = [NSCursor resizeUpDownCursor];
-        else if (shape == GLFW_RESIZE_ALL_CURSOR)
-            cursor->ns.object = [NSCursor closedHandCursor];
-        else if (shape == GLFW_NOT_ALLOWED_CURSOR)
-            cursor->ns.object = [NSCursor operationNotAllowedCursor];
-    }
-
-    if (!cursor->ns.object)
-    {
-        _glfwInputError(GLFW_CURSOR_UNAVAILABLE,
-                        "Cocoa: Standard cursor shape unavailable");
+        _glfwInputError(GLFW_PLATFORM_ERROR,
+                        "Cocoa: Failed to retrieve standard cursor");
         return GLFW_FALSE;
     }
 

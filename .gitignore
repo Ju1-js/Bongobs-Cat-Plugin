@@ -2,3 +2,6 @@
 *.psd
 /gl/
 /thirdParty/glew/glew.pc
+/out/
+/.vs/
+/thirdParty/
