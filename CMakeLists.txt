@@ -16,9 +16,9 @@ set(RES_PATH ${SDK_ROOT_PATH}/Resources)
 project(${APP_NAME})
 
 # Detect architecture.
-if(CMAKE_EXE_LINKER_FLAGS STREQUAL "/machine:x64 /OPT:REF")
+if(CMAKE_EXE_LINKER_FLAGS STREQUAL "/machine:x64")
   set(ARCH x86_64)
-elseif(CMAKE_EXE_LINKER_FLAGS STREQUAL "/machine:x86 /OPT:REF")
+elseif(CMAKE_EXE_LINKER_FLAGS STREQUAL "/machine:x86")
   set(ARCH x86)
 else()
   message(FATAL_ERROR "[${APP_NAME}] Invalid linker flag ${CMAKE_EXE_LINKER_FLAGS}.")
